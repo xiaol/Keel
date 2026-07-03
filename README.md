@@ -76,11 +76,11 @@ has a result is refused rather than silently rerun.
 ## Install (Claude Code)
 
 ```bash
-git clone https://github.com/<you>/keel ~/.claude/skills/keel-repo
+git clone https://github.com/xiaol/Keel ~/.claude/skills/keel-repo
 ln -s ~/.claude/skills/keel-repo/skills/keel ~/.claude/skills/keel
 ```
 
-or as a plugin: `/plugin marketplace add <you>/keel` then `/plugin install keel`.
+or as a plugin: `/plugin marketplace add xiaol/Keel` then `/plugin install keel`.
 
 The skill's hooks (defined in [`skills/keel/SKILL.md`](skills/keel/SKILL.md))
 activate automatically in any project containing a `.keel/` directory and do
