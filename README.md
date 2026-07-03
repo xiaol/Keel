@@ -86,6 +86,26 @@ The skill's hooks (defined in [`skills/keel/SKILL.md`](skills/keel/SKILL.md))
 activate automatically in any project containing a `.keel/` directory and do
 nothing elsewhere.
 
+## Install (Codex CLI)
+
+Codex has no lifecycle hooks, so the adapter skill
+([`adapters/codex/keel/SKILL.md`](adapters/codex/keel/SKILL.md)) turns the
+Stop gate and re-grounding into standing instructions: run `keel status` on
+resume, `keel verify` before declaring done, `keel render` every ~10 tool
+calls. Same ledger, same CLI — prompt-side enforcement instead of hooks.
+
+```bash
+git clone https://github.com/xiaol/Keel ~/keel
+mkdir -p ~/.codex/skills/keel/references
+ln -sfn ~/keel/adapters/codex/keel/SKILL.md ~/.codex/skills/keel/SKILL.md
+ln -sfn ~/keel/skills/keel/scripts ~/.codex/skills/keel/scripts
+ln -sfn ~/keel/skills/keel/reference.md ~/.codex/skills/keel/references/reference.md
+```
+
+Because both installs share one `keel.py` and one `.keel/ledger.jsonl`,
+Claude Code and Codex can work the same project's plan interchangeably — or
+simultaneously, via `keel claim`.
+
 The CLI also works standalone with any agent (or human):
 
 ```bash
