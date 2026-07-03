@@ -1,0 +1,7 @@
+{
+  "name": "keel",
+  "version": "0.1.0",
+  "description": "Ledger-bound planning for AI agents: append-only JSONL state, executable acceptance checks per phase, multi-agent phase claiming, and config-hash experiment dedup.",
+  "author": { "name": "xiaol" },
+  "license": "MIT"
+}
