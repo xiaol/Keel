@@ -73,6 +73,34 @@ open/supported/refuted status and evidence links, plus `keel exp`: runs are
 keyed by the SHA-256 of the canonicalized config, and a hash that already
 has a result is refused rather than silently rerun.
 
+## Install (Agent Skills / Vercel)
+
+keel follows the open [Agent Skills](https://agentskills.io/specification)
+layout, so it can be installed directly from this GitHub repo with Vercel's
+skills CLI:
+
+```bash
+npx skills add xiaol/Keel --skill keel
+```
+
+To inspect what the repo exposes before installing:
+
+```bash
+npx skills add xiaol/Keel --list
+```
+
+Skills installed through the CLI can be discovered by the broader
+[skills.sh](https://www.skills.sh/) ecosystem through normal sharing and
+install activity.
+
+## Install (GitHub Copilot)
+
+GitHub Copilot's skill CLI can install skills from GitHub repositories:
+
+```bash
+gh skill install xiaol/Keel keel
+```
+
 ## Install (Claude Code)
 
 ```bash
@@ -111,6 +139,28 @@ The CLI also works standalone with any agent (or human):
 ```bash
 alias keel='python3 ~/.claude/skills/keel/scripts/keel.py'
 ```
+
+## Share
+
+The shortest share text is:
+
+> keel: ledger-bound planning for AI coding agents. Append-only task state,
+> executable checks per phase, stop-gate verification, multi-agent claims, and
+> config-hash experiment dedup.
+>
+> Install: `npx skills add xiaol/Keel --skill keel`
+
+Good places to share it:
+
+- GitHub repo topics: `agent-skills`, `ai-agents`, `codex`, `claude-code`,
+  `planning`, `developer-tools`
+- [skills.sh](https://www.skills.sh/) via install activity from
+  `npx skills add xiaol/Keel --skill keel`
+- Hacker News as a Show HN post
+- X / Twitter with a short demo GIF or terminal transcript
+- Reddit communities for agent tooling and coding agents
+- Discord or Slack communities around Codex, Claude Code, Vercel AI, and
+  agent engineering
 
 ## Session recovery
 
